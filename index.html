@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de contraseñas en español - Grupo Drifon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generador de contraseñas muy seguras, fáciles de recordar y totalmente en español. Desarrollado por Grupo Drifon.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header>
+            <img src="logo.png" alt="Logo Grupo Drifon" class="logo">
+            <h1>Generador de contraseñas en español</h1>
+            <p class="subtitle">Contraseñas muy seguras, fáciles de recordar y totalmente en español.</p>
+            <p class="brand">Creado por <strong><a href="https://grupodrifon.com" target="_blank">Grupo Drifon</a></strong></p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Personaliza tu contraseña</h2>
+
+                <div class="field">
+                    <label for="length">Longitud (12 a 25 caracteres)</label>
+                    <input id="length" type="number" min="12" max="25" value="16">
+                </div>
+
+                <div class="field checkbox-group">
+                    <p>Elementos que se pueden usar:</p>
+                    <label>
+                        <input type="checkbox" id="useArtists" checked>
+                        Artistas musicales españoles
+                    </label>
+                    <label>
+                        <input type="checkbox" id="useMovies" checked>
+                        Películas españolas
+                    </label>
+                    <label>
+                        <input type="checkbox" id="useActors" checked>
+                        Actores y actrices españoles
+                    </label>
+                    <label>
+                        <input type="checkbox" id="usePhrases" checked>
+                        Frases culturales cortas
+                    </label>
+                </div>
+
+                <div class="field checkbox-group">
+                    <p>Otros caracteres:</p>
+                    <label>
+                        <input type="checkbox" id="useNumbers" checked>
+                        Incluir números (0-9)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="useUnderscore" checked>
+                        Incluir guion bajo (_)
+                    </label>
+                </div>
+
+                <div class="buttons">
+                    <button id="generateBtn">Generar contraseña</button>
+                </div>
+
+                <div class="result">
+                    <label for="resultPassword">Contraseña generada</label>
+                    <div class="result-row">
+                        <input id="resultPassword" type="text" readonly>
+                        <button id="copyBtn">Copiar</button>
+                    </div>
+                    <p id="copyMessage" class="copy-message" hidden>¡Copiada al portapapeles!</p>
+                </div>
+
+                <p class="note">
+                    Consejo: usa un gestor de contraseñas para guardar tus claves y activa siempre que puedas la verificación en dos pasos.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Herramienta gratuita de seguridad digital desarrollada por <strong><a href="https://grupodrifon.com" target="_blank">Grupo Drifon</a></strong>.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
